@@ -4,18 +4,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("LiveCharts.Wpf")]
-[assembly: AssemblyDescription("LiveCharts view for wpf")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LiveCharts.Wpf")]
-[assembly: AssemblyCopyright("Copyright © 2016 Alberto Rodríguez Orozco")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
@@ -39,20 +27,6 @@ using System.Windows;
                                       //(used if a resource is not found in the page, 
                                       // app, or any theme specific resource dictionaries)
 )]
-
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.9.7")]
-[assembly: AssemblyFileVersion("0.9.7")]
 
 [assembly: AssemblyKeyFile(@"..\LVCSign.snk")]
 [assembly: InternalsVisibleTo("LiveCharts.Geared,PublicKey=0024000004800000940000000602000000240000525341310004000001000100bd2e66fab8ce9a4900047ffda57d2f525cf6313dcc9d20994c5e6b3cd8fca906ba7ccd54bea5f7bd6cb503deb81d685259e355e3a9b5c21e5bc80091f08846246371b2a71ab306655651261e910adfa61be236b77d11df23a44d48f00a0e07c689f9a2daaff16d505a1c861d9854d92ed5a8a38fb28c1343fb691462873e71a1")]

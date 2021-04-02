@@ -1,92 +1,125 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.31">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F9637741-4358-40D8-8638-2B35AC72FA39}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UWP</RootNamespace>
-    <AssemblyName>UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
-    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
-    <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AssemblyTitle>UWP</AssemblyTitle>
+    <Product>UWP</Product>
+    <Copyright>Copyright ©  2016</Copyright>
+    <TargetFramework>uap</TargetFramework>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\ARM\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <OutputPath>bin\ARM\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|x86'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|ARM'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|x64'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|x86'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|ARM'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|x64'">
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="CartesianChart\Funnel Chart\resources\fingerprint.png" />
@@ -101,202 +134,185 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
+    <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppShell.xaml.cs">
+    <Compile Update="AppShell.xaml.cs">
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Basic Bars\BasicColumn.xaml.cs">
+    <Compile Update="CartesianChart\Basic Bars\BasicColumn.xaml.cs">
       <DependentUpon>BasicColumn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Basic Bars\BasicRowExample.xaml.cs">
+    <Compile Update="CartesianChart\Basic Bars\BasicRowExample.xaml.cs">
       <DependentUpon>BasicRowExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Basic Stacked Bar\BasicStackedColumnExample.xaml.cs">
+    <Compile Update="CartesianChart\Basic Stacked Bar\BasicStackedColumnExample.xaml.cs">
       <DependentUpon>BasicStackedColumnExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Basic Stacked Bar\BasicStackedRowPercentageExample.xaml.cs">
+    <Compile Update="CartesianChart\Basic Stacked Bar\BasicStackedRowPercentageExample.xaml.cs">
       <DependentUpon>BasicStackedRowPercentageExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\BasicLine\BasicLineExample.xaml.cs">
+    <Compile Update="CartesianChart\BasicLine\BasicLineExample.xaml.cs">
       <DependentUpon>BasicLineExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Bubbles\BubblesExample.xaml.cs">
+    <Compile Update="CartesianChart\Bubbles\BubblesExample.xaml.cs">
       <DependentUpon>BubblesExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Chart to Image\ChartToImageSample.xaml.cs">
+    <Compile Update="CartesianChart\Chart to Image\ChartToImageSample.xaml.cs">
       <DependentUpon>ChartToImageSample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\ConstantChanges\ConstantChangesChart.xaml.cs">
+    <Compile Update="CartesianChart\ConstantChanges\ConstantChangesChart.xaml.cs">
       <DependentUpon>ConstantChangesChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\ConstantChanges\MeasureModel.cs" />
-    <Compile Include="CartesianChart\Customized Series\CustomizedLineSeries.xaml.cs">
+    <Compile Update="CartesianChart\Customized Series\CustomizedLineSeries.xaml.cs">
       <DependentUpon>CustomizedLineSeries.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\CustomTooltipAndLegend\CustomersLegend.xaml.cs">
+    <Compile Update="CartesianChart\CustomTooltipAndLegend\CustomersLegend.xaml.cs">
       <DependentUpon>CustomersLegend.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\CustomTooltipAndLegend\CustomersTooltip.xaml.cs">
+    <Compile Update="CartesianChart\CustomTooltipAndLegend\CustomersTooltip.xaml.cs">
       <DependentUpon>CustomersTooltip.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\CustomTooltipAndLegend\CustomerVm.cs" />
-    <Compile Include="CartesianChart\CustomTooltipAndLegend\CustomTooltipAndLegendExample.xaml.cs">
+    <Compile Update="CartesianChart\CustomTooltipAndLegend\CustomTooltipAndLegendExample.xaml.cs">
       <DependentUpon>CustomTooltipAndLegendExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\DynamicVisibility\DynamicVisibilityExample.xaml.cs">
+    <Compile Update="CartesianChart\DynamicVisibility\DynamicVisibilityExample.xaml.cs">
       <DependentUpon>DynamicVisibilityExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Energy Predictions\EnergyPredictionExample.xaml.cs">
+    <Compile Update="CartesianChart\Energy Predictions\EnergyPredictionExample.xaml.cs">
       <DependentUpon>EnergyPredictionExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Energy Predictions\OpacityConverter.cs" />
-    <Compile Include="CartesianChart\Energy Predictions\ReverseConverter.cs" />
-    <Compile Include="CartesianChart\Events\ChartPointCommandHandler.cs" />
-    <Compile Include="CartesianChart\Events\EventsExample.xaml.cs">
+    <Compile Update="CartesianChart\Events\EventsExample.xaml.cs">
       <DependentUpon>EventsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Events\ViewModel.cs" />
-    <Compile Include="CartesianChart\Financial\CandleStickExample.xaml.cs">
+    <Compile Update="CartesianChart\Financial\CandleStickExample.xaml.cs">
       <DependentUpon>CandleStickExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Financial\OhclExample.xaml.cs">
+    <Compile Update="CartesianChart\Financial\OhclExample.xaml.cs">
       <DependentUpon>OhclExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\FullyResponsive\FullyResponsiveExample.xaml.cs">
+    <Compile Update="CartesianChart\FullyResponsive\FullyResponsiveExample.xaml.cs">
       <DependentUpon>FullyResponsiveExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Funnel Chart\FunnelExample.xaml.cs">
+    <Compile Update="CartesianChart\Funnel Chart\FunnelExample.xaml.cs">
       <DependentUpon>FunnelExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\GanttChart\GanttExample.xaml.cs">
+    <Compile Update="CartesianChart\GanttChart\GanttExample.xaml.cs">
       <DependentUpon>GanttExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\HeatChart\HeatSeriesExample.xaml.cs">
+    <Compile Update="CartesianChart\HeatChart\HeatSeriesExample.xaml.cs">
       <DependentUpon>HeatSeriesExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\InLineSyntax\InLineSyntaxTest.xaml.cs">
+    <Compile Update="CartesianChart\InLineSyntax\InLineSyntaxTest.xaml.cs">
       <DependentUpon>InLineSyntaxTest.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Inverted Series\InvertedExample.xaml.cs">
+    <Compile Update="CartesianChart\Inverted Series\InvertedExample.xaml.cs">
       <DependentUpon>InvertedExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Irregular Intervals\IrregularIntervalsExample.xaml.cs">
+    <Compile Update="CartesianChart\Irregular Intervals\IrregularIntervalsExample.xaml.cs">
       <DependentUpon>IrregularIntervalsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Labels\LabelsExample.xaml.cs">
+    <Compile Update="CartesianChart\Labels\LabelsExample.xaml.cs">
       <DependentUpon>LabelsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Labels\LabelsHorizontalExample.xaml.cs">
+    <Compile Update="CartesianChart\Labels\LabelsHorizontalExample.xaml.cs">
       <DependentUpon>LabelsHorizontalExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\LineExample\LineExample.xaml.cs">
+    <Compile Update="CartesianChart\LineExample\LineExample.xaml.cs">
       <DependentUpon>LineExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Linq\City.cs" />
-    <Compile Include="CartesianChart\Linq\DataBase.cs" />
-    <Compile Include="CartesianChart\Linq\LinqExample.xaml.cs">
+    <Compile Update="CartesianChart\Linq\LinqExample.xaml.cs">
       <DependentUpon>LinqExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\LogarithmScale\LogarithmScaleExample.xaml.cs">
+    <Compile Update="CartesianChart\LogarithmScale\LogarithmScaleExample.xaml.cs">
       <DependentUpon>LogarithmScaleExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\ManualZAndP\ManualZAndPExample.xaml.cs">
+    <Compile Update="CartesianChart\ManualZAndP\ManualZAndPExample.xaml.cs">
       <DependentUpon>ManualZAndPExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\MaterialCards\MaterialCards.xaml.cs">
+    <Compile Update="CartesianChart\MaterialCards\MaterialCards.xaml.cs">
       <DependentUpon>MaterialCards.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Missing Line Points\MissingPointsExample.xaml.cs">
+    <Compile Update="CartesianChart\Missing Line Points\MissingPointsExample.xaml.cs">
       <DependentUpon>MissingPointsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\MixingSeries\MixingSeries.xaml.cs">
+    <Compile Update="CartesianChart\MixingSeries\MixingSeries.xaml.cs">
       <DependentUpon>MixingSeries.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\MultiAxes\MultiAxesChart.xaml.cs">
+    <Compile Update="CartesianChart\MultiAxes\MultiAxesChart.xaml.cs">
       <DependentUpon>MultiAxesChart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\NegativeStackedRow\NegativeStackedRowExample.xaml.cs">
+    <Compile Update="CartesianChart\NegativeStackedRow\NegativeStackedRowExample.xaml.cs">
       <DependentUpon>NegativeStackedRowExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\PointShapeLine\PointShapeLineExample.xaml.cs">
+    <Compile Update="CartesianChart\PointShapeLine\PointShapeLineExample.xaml.cs">
       <DependentUpon>PointShapeLineExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\PointState\PointStateExample.xaml.cs">
+    <Compile Update="CartesianChart\PointState\PointStateExample.xaml.cs">
       <DependentUpon>PointStateExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\ScatterPlot\ScatterExample.xaml.cs">
+    <Compile Update="CartesianChart\ScatterPlot\ScatterExample.xaml.cs">
       <DependentUpon>ScatterExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\SectionsDragable\DragableSections.xaml.cs">
+    <Compile Update="CartesianChart\SectionsDragable\DragableSections.xaml.cs">
       <DependentUpon>DragableSections.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Sections\SectionsExample.xaml.cs">
+    <Compile Update="CartesianChart\Sections\SectionsExample.xaml.cs">
       <DependentUpon>SectionsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\SharedTooltip\SharedTooltipExample.xaml.cs">
+    <Compile Update="CartesianChart\SharedTooltip\SharedTooltipExample.xaml.cs">
       <DependentUpon>SharedTooltipExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\SolidColorChart\SolidColorExample.xaml.cs">
+    <Compile Update="CartesianChart\SolidColorChart\SolidColorExample.xaml.cs">
       <DependentUpon>SolidColorExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\StackedArea\StackedAreaExample.xaml.cs">
+    <Compile Update="CartesianChart\StackedArea\StackedAreaExample.xaml.cs">
       <DependentUpon>StackedAreaExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\StackedArea\VerticalStackedAreaExample.xaml.cs">
+    <Compile Update="CartesianChart\StackedArea\VerticalStackedAreaExample.xaml.cs">
       <DependentUpon>VerticalStackedAreaExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\StackedBar\StackedColumnExample.xaml.cs">
+    <Compile Update="CartesianChart\StackedBar\StackedColumnExample.xaml.cs">
       <DependentUpon>StackedColumnExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\StackedBar\StackedRowExample.xaml.cs">
+    <Compile Update="CartesianChart\StackedBar\StackedRowExample.xaml.cs">
       <DependentUpon>StackedRowExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\StepLine\StepLineExample.xaml.cs">
+    <Compile Update="CartesianChart\StepLine\StepLineExample.xaml.cs">
       <DependentUpon>StepLineExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\TypesSupport\TypesPlotting.xaml.cs">
+    <Compile Update="CartesianChart\TypesSupport\TypesPlotting.xaml.cs">
       <DependentUpon>TypesPlotting.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\UIElements\UIElementsExample.xaml.cs">
+    <Compile Update="CartesianChart\UIElements\UIElementsExample.xaml.cs">
       <DependentUpon>UIElementsExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\Using DateTime\DateModel.cs" />
-    <Compile Include="CartesianChart\Using DateTime\DateTime.xaml.cs">
+    <Compile Update="CartesianChart\Using DateTime\DateTime.xaml.cs">
       <DependentUpon>DateTime.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\ZoomingAndPanning\ZoomingAndPanning.xaml.cs">
+    <Compile Update="CartesianChart\ZoomingAndPanning\ZoomingAndPanning.xaml.cs">
       <DependentUpon>ZoomingAndPanning.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CartesianChart\zzIssues\Issue179.xaml.cs">
+    <Compile Update="CartesianChart\zzIssues\Issue179.xaml.cs">
       <DependentUpon>Issue179.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commons\SampleCategory.cs" />
-    <Compile Include="Commons\SampleDefinition.cs" />
-    <Compile Include="Commons\SampleDefinitions.cs" />
-    <Compile Include="Converters\BoolToObjectConverter.cs" />
-    <Compile Include="Gauges\AngularGaugeExmple.xaml.cs">
+    <Compile Update="Gauges\AngularGaugeExmple.xaml.cs">
       <DependentUpon>AngularGaugeExmple.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Gauges\Gauge360.xaml.cs">
+    <Compile Update="Gauges\Gauge360.xaml.cs">
       <DependentUpon>Gauge360.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PieChart\DoughnutChartExample.xaml.cs">
+    <Compile Update="PieChart\DoughnutChartExample.xaml.cs">
       <DependentUpon>DoughnutChartExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PieChart\PieChartExample.xaml.cs">
+    <Compile Update="PieChart\PieChartExample.xaml.cs">
       <DependentUpon>PieChartExample.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MainPage.xaml.cs">
+    <Compile Update="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest">
-      <SubType>Designer</SubType>
-    </AppxManifest>
     <None Include="UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -548,112 +564,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core.csproj">
-      <Project>{d447642c-a85f-4ab0-96d9-c66cff91aada}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\UwpView\UwpView.csproj">
-      <Project>{9f22a3e2-ce88-41c3-8117-e9d3901baa48}</Project>
-      <Name>UwpView</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.csproj" />
+    <ProjectReference Include="..\..\UwpView\UwpView.csproj" />
   </ItemGroup>
-  <ItemGroup />
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
-    <VisualStudioVersion>14.0</VisualStudioVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|x86'">
-    <OutputPath>bin\x86\r86\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|ARM'">
-    <OutputPath>bin\ARM\r86\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r86|x64'">
-    <OutputPath>bin\x64\r86\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|x86'">
-    <OutputPath>bin\x86\r64\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|ARM'">
-    <OutputPath>bin\ARM\r64\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'r64|x64'">
-    <OutputPath>bin\x64\r64\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <NoStdLib>true</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'arm|x86'">
-    <OutputPath>bin\x86\arm\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'arm|ARM'">
-    <OutputPath>bin\ARM\arm\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'arm|x64'">
-    <OutputPath>bin\x64\arm\</OutputPath>
-  </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
