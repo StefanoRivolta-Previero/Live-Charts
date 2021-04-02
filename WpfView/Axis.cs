@@ -505,7 +505,6 @@ namespace LiveCharts.Wpf
             Model.ClearSeparators();
             Model.Chart.View.RemoveFromView(TitleBlock);
             Sections.Clear();
-            TitleBlock = null;
         }
 
         /// <summary>
