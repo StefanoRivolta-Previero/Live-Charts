@@ -8,9 +8,9 @@
     <Product>LiveCharts.Wpf</Product>
     <Description>Simple, flexible, interactive and powerful data visualization for Wpf (forked from master branch to add Support to netcoreapp3.1)</Description>
     <Copyright>Copyright 2016</Copyright>
-    <Version>0.9.7</Version>
-    <AssemblyVersion>0.9.7</AssemblyVersion>
-    <FileVersion>0.9.7</FileVersion>
+    <Version>0.9.9</Version>
+    <AssemblyVersion>0.9.9</AssemblyVersion>
+    <FileVersion>0.9.9</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWPF>true</UseWPF>
     <Authors>Beto Rodriguez</Authors>
@@ -37,6 +37,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <!--References for .Net Framwork 4 and 35-->
@@ -69,7 +70,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Core40\Core40.csproj" >
+    <ProjectReference Include="..\Core40\Core40.csproj">
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
       <IncludeAssets>LiveCharts.dll</IncludeAssets>
     </ProjectReference>
@@ -77,7 +78,7 @@
 
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))"/>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
     </ItemGroup>
   </Target>
 </Project>
