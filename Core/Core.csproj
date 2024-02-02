@@ -5,7 +5,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <!--<TargetFrameworkProfile>Profile78</TargetFrameworkProfile>-->
-    <TargetFrameworks>net452;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <AssemblyTitle>LiveCharts</AssemblyTitle>
     <Product>LiveCharts</Product>
     <NeutralLanguage>en</NeutralLanguage>

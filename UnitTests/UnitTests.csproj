@@ -41,8 +41,4 @@
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
-    <ProjectReference Include="..\WpfView\WpfView.csproj" />
-  </ItemGroup>
 </Project>

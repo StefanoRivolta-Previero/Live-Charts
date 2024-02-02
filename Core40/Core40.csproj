@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>LiveCharts</RootNamespace>
     <AssemblyName>LiveCharts</AssemblyName>
-    <TargetFrameworks>net40;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net40;net6.0;net7.0;net8.0</TargetFrameworks>
     <AssemblyTitle>LiveCharts</AssemblyTitle>
     <Product>LiveCharts</Product>
     <NeutralLanguage>en</NeutralLanguage>

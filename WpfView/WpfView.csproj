@@ -3,23 +3,23 @@
     <RootNamespace>LiveCharts.Wpf</RootNamespace>
     <AssemblyName>LiveCharts.Wpf</AssemblyName>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworks>net40;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>net6.0-windows;net7.0-windows;net8.0-windows</TargetFrameworks>
     <AssemblyTitle>LiveCharts.Wpf</AssemblyTitle>
-    <Product>LiveCharts.Wpf</Product>
-    <Description>Simple, flexible, interactive and powerful data visualization for Wpf (forked from master branch to add Support to netcoreapp3.1)</Description>
+    <Product>Prevu.LiveCharts.Wpf</Product>
+    <Description>Simple, flexible, interactive and powerful data visualization for WPF (forked from master branch to add Support to net6, net7, net8 and small fixes for Prevu)</Description>
     <Copyright>Copyright 2016</Copyright>
-    <Version>0.9.9</Version>
-    <AssemblyVersion>0.9.9</AssemblyVersion>
-    <FileVersion>0.9.9</FileVersion>
+    <Version>0.9.9.1</Version>
+    <AssemblyVersion>0.9.9.1</AssemblyVersion>
+    <FileVersion>0.9.9.1</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWPF>true</UseWPF>
-    <Authors>Beto Rodriguez</Authors>
+    <Authors>Beto Rodriguez, Stefano Rivolta</Authors>
     <PackageIconUrl>http://lvcharts.net/Content/Images/Logos/lcred.png</PackageIconUrl>
-    <PackageId>LiveCharts.Wpf.NetCore3</PackageId>
+    <PackageId>Prevu.LiveCharts.Wpf.NetCore</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ezhassen/Live-Charts/tree/netcoreapp3.1Master</PackageProjectUrl>
     <PackageReleaseNotes>See https://github.com/beto-rodriguez/Live-Charts/releases</PackageReleaseNotes>
-    <PackageTags>livechart, live, chart, charting, plot, plots, plotting, graph, graphs, graphing, data, wpf, windows, presentation, foundation, format</PackageTags>
+    <PackageTags>prevu, livechart, live, chart, charting, plot, plots, plotting, graph, graphs, graphing, data, wpf, windows, presentation, foundation, format</PackageTags>
 
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
@@ -38,6 +38,7 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile />
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Company>Previero</Company>
   </PropertyGroup>
 
   <!--References for .Net Framwork 4 and 35-->
@@ -62,19 +63,14 @@
     <!--<PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />-->
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
 
   <!--PackageReference for all framworks-->
   <!--<ItemGroup>
     
   </ItemGroup>-->
-
-
-  <ItemGroup>
-    <ProjectReference Include="..\Core40\Core40.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>LiveCharts.dll</IncludeAssets>
-    </ProjectReference>
-  </ItemGroup>
 
   <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
     <ItemGroup>
