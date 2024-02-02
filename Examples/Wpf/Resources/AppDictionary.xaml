@@ -3,7 +3,7 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls">
     
-    <Style x:Key="WindowStyle" TargetType="controls:MetroWindow">
+    <!--<Style x:Key="WindowStyle" TargetType="controls:MetroWindow">
         <Setter Property="WindowTitleBrush" Value="White"></Setter>
         <Setter Property="NonActiveWindowTitleBrush" Value="White"></Setter>
         <Setter Property="TitleCharacterCasing" Value="Normal"></Setter>
@@ -11,7 +11,7 @@
         <Setter Property="BorderBrush" Value="#151516"></Setter>
         <Setter Property="GlowBrush" Value="Black"></Setter>
         <Setter Property="BorderThickness" Value="0"></Setter>
-    </Style>
+    </Style>-->
 
     <DropShadowEffect x:Key="CardShadow" Color="#303030" Opacity=".25" BlurRadius="5" ShadowDepth="3"/>
 
