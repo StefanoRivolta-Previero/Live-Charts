@@ -73,7 +73,7 @@ namespace LiveCharts.Wpf
         /// The fill property
         /// </summary>
         public static readonly DependencyProperty FillProperty = DependencyProperty.Register(
-            "Fill", typeof(Brush), typeof(AngularSection), new PropertyMetadata(default(Brush)));
+            "Fill", typeof(Brush), typeof(AngularSection), new PropertyMetadata(default(Brush), Redraw));
 
         /// <summary>
         /// Gets or sets the fill.
