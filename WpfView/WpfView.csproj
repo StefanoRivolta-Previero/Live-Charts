@@ -17,7 +17,7 @@
     <PackageIconUrl>http://lvcharts.net/Content/Images/Logos/lcred.png</PackageIconUrl>
     <PackageId>Prevu.LiveCharts.Wpf.NetCore</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/ezhassen/Live-Charts/tree/netcoreapp3.1Master</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/StefanoRivolta-Previero/Live-Charts</PackageProjectUrl>
     <PackageReleaseNotes>See https://github.com/beto-rodriguez/Live-Charts/releases</PackageReleaseNotes>
     <PackageTags>prevu, livechart, live, chart, charting, plot, plots, plotting, graph, graphs, graphing, data, wpf, windows, presentation, foundation, format</PackageTags>
 
